@@ -65,13 +65,13 @@ contract StudentMgt {
         return students.length;
     }
 
-    function getAllStudent() public view returns(Studnet[] memory){
+    function getAllStudent() public view returns(Student[] memory){
         return students;
     }
 
     function avgAllScore() public view returns(uint){
         uint totalScore=0;
-        for(uint i=0;i<studnets.length;i++){
+        for(uint i=0;i<students.length;i++){
             totalScore += students[i].score;
         }
         return totalScore/students.length;
@@ -81,7 +81,7 @@ contract StudentMgt {
         return avgAllScore()>=70;
     }
 
-    function getStudentsF() public view returns(uint,Studnet[] memory){
+    function getStudentsF() public view returns(uint,Student[] memory){
         uint count = 0; uint index = 0;
     }
 }
