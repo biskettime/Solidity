@@ -36,7 +36,7 @@ contract StudentMgt {
     Student(_name, _id, _score, checkGrade(_score), _subjects)
 );}
 
-    function getStudentById(uint _id) public view returns(Studnet memory){
+    function getStudentById(uint _id) public view returns(Student memory){
         for (uint i=0; i<studnet.length; i++){
             if(students[i].id==id){
                 return students[i];
