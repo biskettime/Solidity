@@ -14,19 +14,27 @@ contract StudentMgt {
     Student[] students;
 
     function checkGrade(uint _score) internal pure returns (string memory) {
-        if(score>=90) return "A";
-        if(score>=80) return "B";
-        if(score>=70) return "C";
-        if(score>=60) return "D";
+    if (_score >= 90) {
+        return "A";
+    } else if (_score >= 80) {
+        return "B";
+    } else if (_score >= 70) {
+        return "C";
+    } else if (_score >= 60) {
+        return "D";
+    } else {
         return "F";
     }
+}
 
     function setStudent(
         string memory name,
         uint id,
         uint score,
         string[] memory subjects
-    ) public {student.push(Student());}
+    ) public {students.push(
+    Student(_name, _id, _score, checkGrade(_score), _subjects)
+);}
 
     function getStudentById(uint _id) public view returns(Studnet memory){
         for (uint i=0; i<studnet.length; i++){
