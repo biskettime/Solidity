@@ -33,7 +33,7 @@ contract StudentMgt {
         uint score,
         string[] memory subjects
     ) public {students.push(
-    Student(_name, _id, _score, checkGrade(_score), _subjects)
+    Student(name, id, score, checkGrade(_score), subjects)
 );}
 
     function getStudentById(uint _id) public view returns(Student memory){
