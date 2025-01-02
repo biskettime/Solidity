@@ -8,7 +8,7 @@ contract classMgt{
         string name;
         uint score;
     }
-    Student[] public students;  // 구조체 구성
+    Student[] students;  // 구조체 구성
 
     function setStudent(uint _id, string memory _name, uint _score) public {
         students.push(Student(_id, _name, _score)); // 학생 정보 입력
