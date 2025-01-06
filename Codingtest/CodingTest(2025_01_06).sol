@@ -61,8 +61,8 @@ contract Game{
 
         if(room.length==4){
             for(uint i =0; i<room.length; i++){
-                
-            }
+                uint reward = SCORE_REWARD - i;
+        }
         }
     }
 }
